@@ -77,7 +77,7 @@ app.post('/api/users', async (req, res) => {
   await userRemember.save();
   res.status(201).json({ ...user.toObject(), createdAt: formatDateTime(user.createdAt) });
 });
-
+// แก้ไขพาท
 app.put('/api/users/:id', async (req, res) => {
   const { id } = req.params;
   const { name, room, rent, tel } = req.body;
